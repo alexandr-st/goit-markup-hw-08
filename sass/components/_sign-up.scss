@@ -1,0 +1,131 @@
+.sign-up {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    
+    @media screen and (max-width:1199px) {
+        max-width: 450px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    @media screen and (min-width:1200px) {
+        max-width:570px;
+        justify-content: start;
+
+    }
+}
+
+.sign-up__subtitle {
+    display: inline-block;
+    width: 100%;
+    max-width:219px;
+    margin-bottom: 20px;
+}
+
+.sign-up__form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width:1200px) {
+        max-width: 570px;
+    }
+
+}
+
+.sign-up__input {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @include font(16px, 400, 20px);
+
+    letter-spacing: var(--letter-spacing);
+
+    background-color: transparent;
+    color: var(--primary-background-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media screen and (max-width: 1199px) {
+        max-width: 450px;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width:1200px) {
+        max-width: 358px;
+        margin-right: 12px;
+    }
+}
+
+
+
+.sign-up__button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    max-width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 24px;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        margin-left: 10px;
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/svg-icon/sign-up/paper-jet.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &::before {
+        position: absolute;
+        bottom: 50%;
+        right: 28px;
+        transform: translateY(calc(50% + 40px));
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/svg-icon/sign-up/paper-jet.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+
+
+.sign-up__button:focus::after {
+    transform: translate(50px, -50px);
+}
+
+.sign-up__button:focus::before {
+    transform: translateY(50%);
+}

@@ -1,0 +1,26 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    background-color: var(--accent-text-color);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+
+}
+
+.button__label {
+    @include font(16px, 700, 30px);
+    font-family: inherit;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: var(--hero-title-letter-spacing);
+
+    color: var(--secondary-text-color);
+}

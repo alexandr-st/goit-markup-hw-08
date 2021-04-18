@@ -1,0 +1,16 @@
+.title {
+    margin-bottom: 50px;
+
+    @include font(36px, 700, 42px);
+
+    text-align: center;
+    letter-spacing: var(--letter-spacing);
+
+    color: var(--primary-text-color);
+
+    @media screen and (max-width:1199px) {
+        margin-bottom: 30px;
+        
+        @include font(28px, 700, 33px);
+    }
+}

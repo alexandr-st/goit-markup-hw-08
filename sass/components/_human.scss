@@ -1,0 +1,29 @@
+.human {
+    text-align: center;
+}
+
+.human__title {
+    margin-bottom: 10px;
+
+    @include font(16px, 500, 19px);
+    text-align: center;
+    letter-spacing: var(--letter-spacing);
+
+    color: var(--primary-text-color);
+}
+
+.human__paragraph {
+    margin-bottom: 16px;
+
+    @include font(16px, 400, 19px);
+    letter-spacing: var(--letter-spacing);
+}
+
+
+.human__info {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
